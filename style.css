@@ -1,0 +1,586 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Fraunces', sans-serif;
+}
+
+p, a, li, ul, button{
+    font-family: 'Barlow', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+/*header*/
+.main-header{
+    background-image: url('./images/mobile/image-header.jpg') ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: scroll;
+    min-height: 50vh;
+    background-position: center center ;
+    padding: 2rem 1.5rem;
+    min-width: 100%;
+    min-height: 350px;
+}
+
+.main-header .logo{
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+/*menu*/
+.main-header .hamburger{
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.main-header .hamburger:hover{
+    opacity: 0.8;
+}
+
+.main-header .nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.main-header .nav .nav-list{
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+    margin-top: 4rem;    
+    padding: 1.4rem 0;
+}
+
+.main-header .nav .nav-list .nav-item .nav-link{
+    font-size: 17px;
+    color: hsl(213, 9%, 39%);
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    margin: 1.4rem auto;
+    transition: 0.4s;
+    max-width: 50%;
+}
+
+.main-header .nav .nav-list .nav-item .nav-link:hover{
+    opacity: 0.8;
+}
+
+.main-header .nav .nav-list .nav-item .nav-link.special{
+    text-transform: uppercase;
+    background-color: hsl(51, 100%, 49%);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:hsl(212, 27%, 19%);
+    font-weight: 900;
+}
+
+.main-header .nav.active .nav-list{
+    display: block;
+}
+
+.main-header .nav.active ~ h1.main-title{
+    margin-top: 9rem;
+}
+
+.main-header h1.main-title{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    font-size: 33px;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.main-header .arrow{
+    display: block;
+    margin: 0.3rem auto;
+
+}
+
+/*main*/
+/*brand section*/
+.main .brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main  .background-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 1;    
+    min-height: 250px;
+    width: 100%;
+}
+
+.main .brand .background-image.egg{
+    background-image: url('./images/mobile/image-transform.jpg');
+}
+
+/*content*/
+.main .content{
+    flex: 1;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.main .content h2{
+    color: hsl(212, 27%, 19%);
+    font-size: 30px;
+}
+
+.main .content h3 a{
+    color: hsl(212, 27%, 19%);
+    text-transform: uppercase;
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    z-index: 1;
+}
+
+.main .content h3 a.learn-one:hover::after{    
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: 22px;
+    width: 100%;
+    height: 10px;
+    padding: 0 3px;
+    border: 1px solid hsl(51, 100%, 49%);
+    border-radius: 10px;
+    background-color: hsl(51, 100%, 49%);
+    color: hsl(51, 100%, 49%);
+    font-size: 14px;
+}
+
+.main .content h3 a.learn-two:hover::after{    
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: 22px;
+    width: 100%;
+    height: 10px;
+    padding: 0 3px;
+    border: 1px solid hsl(7, 99%, 70%);
+    border-radius: 10px;
+    background-color: hsl(7, 99%, 70%);
+    color: hsl(7, 99%, 70%);
+    font-size: 14px;
+}
+
+.main .content p{
+    color: hsl(232, 10%, 55%);
+    font-size: 16px;
+    margin: 1.5rem 0;
+    font-weight: 600;
+}
+
+/*stand-out section*/
+.main .stand-out{
+    width: 100%;
+}
+
+.main .stand-out .background-image.glass{
+    background-image: url('./images/mobile/image-stand-out.jpg');
+}
+
+/*graphics and photography section*/
+.main .graphics{
+    display: flex;
+    flex-direction: column;
+}
+
+.main .graphics .background-image{
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.main .graphics .background-image p{
+    font-weight: 600;
+}
+
+.main .graphics .background-image h3{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 25px;
+}
+
+.main .graphics .background-image.graphic{
+    background-image: url('./images/mobile/image-graphic-design.jpg');
+}
+
+.main .graphics .background-image.graphic h3{
+    color: hsl(167, 40%, 24%);
+}
+
+.main .graphics .background-image.graphic p{
+    color: hsl(167, 40%, 24%);    
+}
+
+.main .graphics .background-image.photography{
+    background-image: url('./images/mobile/image-photography.jpg');
+}
+
+.main .graphics .background-image.photography h3{
+    color: hsl(198, 62%, 26%);
+}
+
+.main .graphics .background-image.photography p{
+    color: hsl(198, 62%, 26%);
+}
+
+/*testimonials section*/
+.main .testimonials{
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.main .testimonials h2{
+    color: hsl(210, 4%, 67%);
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+    font-size: 19px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.main .testimonials .cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main .testimonials .cards .testimonial-card{
+    width: 100%;
+}
+
+.main .testimonials .cards .testimonial-card .card-image{
+    display: block;
+    margin: 2.2rem auto 1.6rem auto;
+    border-radius: 100%;
+    width: 60px;
+    height: auto;
+}   
+
+.main .testimonials .cards .testimonial-card h4{
+    margin-top: 1.2rem;
+    color: hsl(212, 27%, 19%);
+    font-size: 20px;
+}
+
+.main .testimonials .cards .testimonial-card p{
+    color: hsl(213, 9%, 39%);
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.main .testimonials .cards .testimonial-card p.occupation{
+    color: hsl(210, 4%, 67%);
+    margin-bottom: 0.3rem;
+    font-size: 15px;
+}
+
+/*4 image section*/
+.main .images{
+    margin-top: 0.8rem;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main .images .img{
+    width: 50%;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main .images .img:nth-child(1){
+    background-image: url('./images/mobile/image-gallery-milkbottles.jpg');
+}
+
+.main .images .img:nth-child(2){
+    background-image: url('./images/mobile/image-gallery-orange.jpg');
+}
+
+.main .images .img:nth-child(3){
+    background-image: url('./images/mobile/image-gallery-cone.jpg');
+}
+
+.main .images .img:nth-child(4){
+    background-image: url('./images/mobile/image-gallery-sugar-cubes.jpg');
+}
+
+
+/*footer*/
+.footer{
+    background-color: hsl(167, 43%, 70%);
+    color: hsl(168, 34%, 41%);
+    padding: 3rem 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.footer .footer-logo{
+    color: hsl(168, 34%, 41%);
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.footer .links{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.footer .links a{
+    color: hsl(168, 34%, 41%);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.footer .social-media{
+    margin-top: 4.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .attribution { 
+    font-size: 12px;
+    text-align: center;
+    color: hsl(168, 34%, 41%);
+}
+.attribution a {
+    color: hsl(198, 62%, 26%);
+    font-weight: 900;
+}
+
+/*desktop design*/
+@media screen and (min-width: 376px) and (max-width: 1440px) {
+    /*header*/
+    .main-header{
+        background-image: url('./images/desktop/image-header.jpg') ;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-attachment: scroll;
+        background-position: center;
+        width: 100%;
+        min-height: 350px;
+    }
+
+    /*menu*/
+    .main-header .nav, .main-header .nav.active{
+        display: flex;
+        margin: 0;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        position: static;        
+    }
+    
+    .main-header .nav .nav-list{
+        background: none;
+        position: static;
+        display: flex;
+        margin: 0;
+        max-width: 500px;
+        z-index: 0;                
+        gap: 5%;    
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .main-header .nav .nav-list .nav-item .nav-link{
+        color: white;
+        cursor: pointer;
+        display: inline;
+    }
+
+    .main-header .nav .nav-list .nav-item .nav-link.special{
+        display: inline;
+        background-color: white;
+    }
+    
+    .main-header .nav.active .nav-list{
+        display: flex;
+    }
+    
+    .main-header .nav.active ~ h1.main-title{
+        margin-top: 0;
+    }
+    
+
+    .main-header .hamburger{
+        display: none;
+    }
+
+    /*main*/
+    /*brand section*/
+    .main .brand{
+        justify-content: center;
+        flex-direction: row-reverse;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    /*content*/
+    .main .content{
+        width: 50%;
+        max-width: 50%;        
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: left;
+        min-height: 450px;
+        padding: 0 6%;
+    }
+
+    .main .content h2{
+        width: 100%;
+    }
+
+    .main .content p{
+        width: 100%;
+        margin: 2.3rem 0;
+    }
+
+    .main .content h3{
+        width: 100%;
+    }
+
+    .main .background-image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        flex: 1;    
+        padding: 0;
+        margin: 0;
+        width: 50%;
+        height: 100%;
+        min-height: 450px;
+    }
+    
+    .main .brand .background-image.egg{
+        background-image: url('./images/desktop/image-transform.jpg');        
+    }
+
+    /*stand-out section*/
+    .main .stand-out{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        height: 450px;
+        padding: 0;
+        margin: 0;        
+    }
+
+    .main .stand-out .content h2{
+        margin-top: 1rem;
+    }
+
+    .main .stand-out .background-image.glass{
+        background-image: url('./images/mobile/image-stand-out.jpg');
+        height: 100%;
+    }
+
+
+    /*graphic and photography section*/
+    .main .graphics{
+        flex-direction: row;
+        min-height: 450px;
+    }
+    
+    .main .graphics .background-image{
+        min-height: 450px;
+        height: 100%;
+        display: flex;
+        max-width: 50%;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 4% 6%;
+        text-align: center;
+    }
+
+    .main .graphics .background-image.graphic{
+        background-image: url('./images/desktop/image-graphic-design.jpg');
+    }
+
+    .main .graphics .background-image.photography{
+        background-image: url('./images/desktop/image-photography.jpg');
+    }
+
+    /*testimonials section*/
+    .main .testimonials{
+        padding: 5% 8%;
+    }
+
+    .main .testimonials .cards{
+        display: flex;
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+    
+    /*4 image section*/
+    .main .images .img{
+        width: 100%;
+        flex: 1;
+        min-height: 400px;
+    } 
+}
