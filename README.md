@@ -52,7 +52,7 @@ Users should be able to:
 
 ### ⚓ Links
 
-- [Website hosted on github pages]()
+<p><a href='https://gustavo-victor.github.io/sunnyside-agency-landing-page-main/' target='_blank'>Website hosted on Github Pages</a></p>
 
 ## 🛠 My process
 
